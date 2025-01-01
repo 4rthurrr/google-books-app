@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyDWvMNevaCyGhPisxSuctrAfOHwhILHy4M";
+const API_KEY = "API KEY";
 const BASE_URL = "https://www.googleapis.com/books/v1/volumes";
 
 export const fetchBooks = async (query, startIndex = 0, maxResults = 10) => {
