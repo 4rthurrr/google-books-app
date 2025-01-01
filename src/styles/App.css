@@ -1,0 +1,22 @@
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.book {
+  width: 150px;
+  text-align: left;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+}
