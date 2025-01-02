@@ -22,7 +22,7 @@ This project is a React application that allows users to search for books using 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/google-books-app.git
+git clone https://github.com/4rthurrr/google-books-app.git
 cd google-books-app
 ```
 
