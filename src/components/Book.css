@@ -1,0 +1,38 @@
+.book-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-link:hover h3 {
+  text-decoration: underline;
+}
+
+.book {
+  width: 150px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.book:hover {
+  transform: scale(1.05);
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+}
+
+.book h3 {
+  font-size: 1em;
+  margin: 10px;
+}
+
+.book p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 10px;
+}

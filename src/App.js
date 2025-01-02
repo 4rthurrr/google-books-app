@@ -27,7 +27,7 @@ const App = () => {
   const handleSearch = async () => {
     setLoading(true);
     saveToHistory(query);
-    const results = await fetchBooks(query);
+    const results = await fetchBooks(query, page);
     setBooks(results || []);
     setLoading(false);
   };
@@ -54,20 +54,16 @@ const App = () => {
           element={
             <div className="app">
               <h1>Google Books Search</h1>
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search for books"
-              />
-              <button onClick={handleSearch}>Search</button>
-
-              {/*<div className="search-history">
-                <h2>Search History</h2>
-                {searchHistory.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
-              </div>*/}
+              <br></br>
+              <div className="search-bar">
+                <input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search for books"
+                />
+                <button onClick={handleSearch}>Search</button>
+              </div>
 
               <div className="book-list">
                 {loading ? (
@@ -87,7 +83,7 @@ const App = () => {
                 )}
               </div>
 
-                <br></br>
+                
 
               <div className="pagination">
                 <button onClick={handlePreviousPage} disabled={page === 0}>
@@ -95,12 +91,16 @@ const App = () => {
                 </button>
                 <button onClick={handleNextPage}>Next</button>
               </div>
+              <br></br>
+              <footer className="footer">
+                <p>&copy; 2023 Shanuka. All rights reserved.</p>
+              </footer>
             </div>
           }
         />
 
         {/* Book Details Page */}
-        <Route path="/book/:id" element={<BookDetails />} />
+        <Route path="/book/:id" element={<BookDetails/>} />
       </Routes>
     </Router>
   );
