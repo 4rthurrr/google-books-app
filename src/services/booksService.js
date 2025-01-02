@@ -1,4 +1,4 @@
-const API_KEY = "API KEY";
+const API_KEY = process.env.REACT_APP_BOOKS_API_KEY;
 const BASE_URL = "https://www.googleapis.com/books/v1/volumes";
 
 export const fetchBooks = async (query, startIndex = 0, maxResults = 10) => {
@@ -14,4 +14,19 @@ export const fetchBooks = async (query, startIndex = 0, maxResults = 10) => {
     return [];
   }
 };
+
+export const fetchBookById = async (id) => {
+  try {
+    const response = await fetch(
+      `https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`
+    );
+    if (!response.ok) throw new Error("Failed to fetch book details");
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
+
+
 
