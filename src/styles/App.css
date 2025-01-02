@@ -1,16 +1,14 @@
 body {
-  margin: 0;
+  margin-right: 80px;
   padding: 0;
   font-family: Arial, sans-serif;
   background: #4568DC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 80px;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -31,23 +29,29 @@ background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, F
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px;
 }
 
 .search-bar {
+  padding-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .search-bar input {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .search-bar button {
@@ -190,5 +194,36 @@ background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, F
 .pagination button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.footer p {
+  margin: 0;
+  color: #333;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .book {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
