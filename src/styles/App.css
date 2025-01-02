@@ -80,6 +80,7 @@ body {
 
 .book {
   width: 150px;
+  height: auto;
   text-align: left;
   background-color: #fff;
   border-radius: 8px;
@@ -199,7 +200,7 @@ body {
 
 .footer {
   margin-top: 20px;
-  padding: 10px 0;
+  padding: 5px 0;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;

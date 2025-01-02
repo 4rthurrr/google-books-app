@@ -6,7 +6,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const fetchBooks = async (query, startIndex = 0, maxResults = 7) => {
   try {
-    await delay(1000);
+    await delay(500);
     const response = await fetch(
       `${BASE_URL}?q=${query}&startIndex=${startIndex}&maxResults=${maxResults}&key=${API_KEY}`
     );

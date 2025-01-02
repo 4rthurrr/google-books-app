@@ -33,15 +33,19 @@ const App = () => {
   };
 
   const handleNextPage = async () => {
+    setLoading(true);
     const nextPageBooks = await fetchBooks(query, page + 10);
     setBooks(nextPageBooks || []);
+    setLoading(false);
     setPage((prev) => prev + 10);
   };
 
   const handlePreviousPage = async () => {
+    setLoading(true);
     if (page === 0) return;
     const prevPageBooks = await fetchBooks(query, page - 10);
     setBooks(prevPageBooks || []);
+    setLoading(false);
     setPage((prev) => prev - 10);
   };
 
@@ -110,7 +114,7 @@ const App = () => {
                 </button>
                 <button onClick={handleNextPage}>Next</button>
               </div>
-              <br></br>
+              
               <footer className="footer">
                 <p>&copy; 2024 Shanuka. All rights reserved.</p>
               </footer>
