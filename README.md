@@ -26,22 +26,24 @@ git clone https://github.com/your-username/google-books-app.git
 cd google-books-app
 ```
 
-2.Install the dependencies:
+2. Install the dependencies:
 
 ```bash
 npm install
 ```
 
-3.Create a .env file in the root directory and add your Google Books API key:
+3. Create a .env file in the root directory and add your Google Books API key:
 
+```bash
 REACT_APP_BOOKS_API_KEY=your_google_books_api_key_here
+```
 
-4.In the project directory, you can run:
+4. In the project directory, you can run:
 
 ```bash
 npm start
-
 ```
+
 ![Screenshot 2025-01-02 180953](https://github.com/user-attachments/assets/738ce3e1-03fd-495e-bd2b-54cfd35d218f)
 ![Screenshot 2025-01-02 180901](https://github.com/user-attachments/assets/e1a64fc2-81c8-4d3d-9fe2-a4e9d9bf5867)
 
